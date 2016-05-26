@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Sbtn.js by BerkPW</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Sbtn.js</h1>
+        <h2>Hacii_ ve BerkPW&#39;nin ortak projesi (Süreli Buton)</h2>
+        <a href="https://github.com/BerkPW/sbtn.js" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="sbtnjs-süreli-buton-js" class="anchor" href="#sbtnjs-s%C3%BCreli-buton-js" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sbtn.js (Süreli Buton JS)</h1>
+
+<p>Hacii_ ve BerkPW'nin ortak projesi olan Sbtn.js'nin amacı basit bir yapıda javascript kodları ile html butonlara süre ifadesi eklemektir. Bu proje herkese açık ve ücretisiz şekilde paylaşılmıştır. Geliştirmek serbesttir.</p>
+
+<hr>
+
+<h3>
+<a id="kullanımı" class="anchor" href="#kullan%C4%B1m%C4%B1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kullanımı</h3>
+
+<p>İlk olarak <code>head</code> tagının arasına css ve js dosyalarını çağırınız.</p>
+
+<p>Herhangi bir buton çeşidine <code>id</code> ekleyiniz.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>sureli_a<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://google.com<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sbtn sbtn-flat<span class="pl-pds">"</span></span>&gt;A Href&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+
+<p>ve <code>&lt;/body&gt;</code> tagından önce</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">sbtn</span>(id, ayar, saniye);
+
+Örnek<span class="pl-k">:</span>
+<span class="pl-en">sbtn</span>(<span class="pl-s"><span class="pl-pds">"</span>sureli_a<span class="pl-pds">"</span></span>, {}, <span class="pl-c1">8</span>);</pre></div>
+
+<p>kodunu script tagları içinde ekleyin... 
+Böylelikle <code>sureli_a</code> id'li butonumuza 8 sn bekleme verdik.</p>
+
+<h4>
+<a id="ayarlar" class="anchor" href="#ayarlar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ayarlar</h4>
+
+<p>sbtn fonksyonunda ayarlar kısmı json ile oluşturulur.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">sbtn</span>(<span class="pl-s"><span class="pl-pds">"</span>sureli_a<span class="pl-pds">"</span></span>, {
+  beklemeYazisi<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>deneme-a<span class="pl-pds">"</span></span>,
+  yaziRenk<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>green<span class="pl-pds">"</span></span>,
+  arkaplanRenk<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#eee<span class="pl-pds">"</span></span>
+  yuvarlak<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>12<span class="pl-pds">"</span></span>
+}, <span class="pl-c1">8</span>);</pre></div>
+
+<p>Ayar kodlarının açıklamaları:</p>
+
+<table>
+<thead>
+<tr>
+<th>Ayar Kodu</th>
+<th>Örnek Değer</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beklemeYazisi</td>
+<td>Bekleyiniz...</td>
+<td>Süre dolana kadar buton üzerinde yazmasını istediğiniz yazı yazar eğer bu değişken olmaz ise butona atanan isim yazılır.</td>
+</tr>
+<tr>
+<td>yaziRenk</td>
+<td>blue</td>
+<td>Butonun üzerinde yazan yazının rengini belirler eğer bu değişken olmaz ise Beyaz renk olur.</td>
+</tr>
+<tr>
+<td>arkaplanRenk</td>
+<td>#000</td>
+<td>Butonun arkadaplan rengini belirler eğer bu değişken olmaz ise Gri renk olur.</td>
+</tr>
+<tr>
+<td>yuvarlak</td>
+<td>30</td>
+<td>Butonun kenarlarının yuvarlaklığını belirler eğer bu değişken olmaz ise 0 yani keskin olur.</td>
+</tr>
+</tbody>
+</table>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/BerkPW/sbtn.js/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/BerkPW/sbtn.js/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/BerkPW/sbtn.js"></a> is maintained by <a href="https://github.com/BerkPW">BerkPW</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
