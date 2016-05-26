@@ -4,7 +4,7 @@ Hacii_ ve BerkPW'nin ortak projesi olan Sbtn.js'nin amacı basit bir yapıda jav
 ***
 
 ###Kullanımı
-İlk olarak `head` tagının arasına css ve js dosyalarımızı çağırınız.
+İlk olarak `head` tagının arasına css ve js dosyalarını çağırınız.
 
 Herhangi bir buton çeşidine `id` ekleyiniz.
 ```html
