@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sbtn.js Beta v1.0 => Example 1</title>
+	<link rel="stylesheet" href="../css/sbtn.css">
+	<script>
+		sbtn("sureli_a", [], 10);
+		sbtn("sureli_btn", [], 12);
+		sbtn("sureli_input", [], 14);
+	</script>
+</head>
+<body>
+	<a id="sureli_a" onclick="alert(/sbtn1/);" href="#" class="sbtn sbtn-flat">a href</a>
+	<button id="sureli_btn" onclick="alert(/sbtn2/);" class="sbtn sbtn-flat">button</button>
+	<input id="sureli_input" onclick="alert(/sbtn3/);" type="submit" class="sbtn sbtn-flat" value="input" />
+
+	<script src="../js/sbtn.js"></script>
+	<script>
+		sbtn("sureli_a", {
+	    beklemeYazisi: "deneme-a",
+	    yaziRenk: "green",
+	    arkaplanRenk: "black"
+	  }, 4);
+	  sbtn("sureli_btn", {
+	    beklemeYazisi: "deneme-btn",
+	    yaziRenk: "red",
+	    yuvarlak: "0"
+	  }, 6);
+	  sbtn("sureli_input", {
+	    beklemeYazisi: "DeNeMe-input",
+	    arkaplanRenk: "orange",
+	    yuvarlak: "30"
+	  }, 8);
+	</script>
+</body>
+</html>
