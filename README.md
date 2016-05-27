@@ -5,6 +5,10 @@ Hacii_ ve BerkPW'nin ortak projesi olan Sbtn.js'nin amacı basit bir yapıda jav
 
 ###Kullanımı
 İlk olarak `head` tagının arasına css ve js dosyalarını çağırınız.
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/BerkPW/sbtn.js/master/css/sbtn.css">
+<script src="https://raw.githubusercontent.com/BerkPW/sbtn.js/master/js/sbtn.js"></script>
+```
 
 Herhangi bir buton çeşidine `id` ekleyiniz.
 ```html
